@@ -1,6 +1,4 @@
-# Beta DOM for react-basic
-
-Want to help out? Checkout [CONTRIBUTING.md](./CONTRIBUTING.md)
+# DOM for react-basic
 
 After using react-basic-hooks for a while I've gathered a small wishlist for things that I'd like to work a little differently.
 
@@ -17,67 +15,38 @@ example =
   div { "data-testid": "example" }
     [ a { href: "https://example.com" }
         $ span { "aria-label": "somelabel" } "Example"
-    , text " and so on..."
+    , span {} " and so on..."
     ]
 ```
 
 vs.
 
 ```purescript
--- this is a bit unfair because the "simplified" DOM also exists and would make this quite a bit better
 module Example where
 
 import Prelude hiding (div)
-import React.Basic.DOM (div, a, span)
+import React.Basic.DOM (div, a, span, text)
 import Foreign.Object (singleton) as Object
 
 example =
   div
     { _data: Object.singleton "testid" "example"
     , children:
-        [ a { href: "https://exmaple.com", children: [ span { _aria: Object.singleton "label" "somelabel", children: [ "Example" ] } ] }
-        , text " and so on..."
+        [ a { href: "https://exmaple.com", children: [ span { _aria: Object.singleton "label" "somelabel", children: [ text "Example" ] } ] }
+        , span { children: [ text  " and so on..." ] }
         ]
     }
 ```
 
 ## Trying it out / Installation
 
-This is a work-in-progress library that works on its own and in conjunction with the existing react-basic-hooks-dom library.
+This is a library that works on its own and in conjunction with the existing react-basic-hooks-dom library.
 
-I don't want to publish it yet, but you can easily integrate it via your `packages.dhall` file.
-
-Add this to your `packages.dhall` file:
-```dhall
-with react-basic-dom-beta =
-      { dependencies =
-          [ "datetime"
-          , "effect"
-          , "forgetmenot"
-          , "functions"
-          , "nullable"
-          , "prelude"
-          , "react-basic"
-          , "react-basic-hooks"
-          , "record"
-          , "type-equality"
-          , "typelevel-prelude"
-          , "unsafe-coerce"
-          , "web-dom"
-          , "web-events"
-          , "web-html"
-          , "web-touchevents"
-          ]
-      , repo =
-          "https://github.com/rowtype-yoga/purescript-react-basic-dom-Yoga.React.git"
-      , version = "main"
-      }
-```
 
 Then run:
 
 ```sh
-spago install react-basic-dom-beta
+spago install yoga-react-dom
 ```
 
 ## Features and design goals
@@ -103,7 +72,7 @@ This is in line with HTML where the children are not part of the attributes and 
 
 React's `createElement` may be invoked without any children, or with zero to many children. The only way to approximate this in PureScript was via a typeclass as in the `Simplified` DOM. 
 
-The downside of this is that this stops working within Arrays because PureScript requires arrays to be of the same shape. There are two workarounds that I know of:
+The downside of this is that this stops working within Arrays because PureScript requires arrays to be of the same shape. Here is a workaround:
 
 Manually casting the text to be JSX via `text`:
 
@@ -113,35 +82,4 @@ import Yoga.React.DOM (text)
 import Yoga.React.DOM.HTML.P (p)
 
 x = [ text "A string", p {} "A p" ]
-```
-
-Or foregoing the array altogether and using an operator:
-
-```purescript
-module Example where
-import Yoga.React.DOM.Internal ((++))
-import Yoga.React.DOM.HTML.P (p)
-
-x = "A string" ++ p {} "A p"
-```
-
-I dislike both of these, because they are likely to trip beginners up.
-
-#### Difference to the existing Simplified DOM
-This DOM does not wrap anything in an `Array` because React's API does not require that anyway.
-
-Another difference to the existing Simplified version is that this supports passing an empty array, while Simplified supports passing an array of anything that's has a `ToJSX` instance.
-
-This is the difference in code with workarounds applied:
-
-##### Simplified:
-```purescript
-strings = p {} [ "A string", "Another string" ]
-empties = p {} ([] :: _ JSX)
-```
-
-##### Beta:
-```purescript
-strings = p {} "A stringAnother string"
-empties = p {} []
 ```
