@@ -10,8 +10,8 @@ After using react-basic-hooks for a while I've gathered a small wishlist for thi
 module Example where
 
 import Prelude hiding (div)
-import Beta.DOM.HTML (div, a, span)
-import Beta.DOM (text)
+import Yoga.React.DOM.HTML (div, a, span)
+import Yoga.React.DOM (text)
 
 example =
   div { "data-testid": "example" }
@@ -69,7 +69,7 @@ with react-basic-dom-beta =
           , "web-touchevents"
           ]
       , repo =
-          "https://github.com/rowtype-yoga/purescript-react-basic-dom-beta.git"
+          "https://github.com/rowtype-yoga/purescript-react-basic-dom-Yoga.React.git"
       , version = "main"
       }
 ```
@@ -109,8 +109,8 @@ Manually casting the text to be JSX via `text`:
 
 ```purescript
 module Example where
-import Beta.DOM (text)
-import Beta.DOM.HTML.P (p)
+import Yoga.React.DOM (text)
+import Yoga.React.DOM.HTML.P (p)
 
 x = [ text "A string", p {} "A p" ]
 ```
@@ -119,8 +119,8 @@ Or foregoing the array altogether and using an operator:
 
 ```purescript
 module Example where
-import Beta.DOM.Internal ((++))
-import Beta.DOM.HTML.P (p)
+import Yoga.React.DOM.Internal ((++))
+import Yoga.React.DOM.HTML.P (p)
 
 x = "A string" ++ p {} "A p"
 ```

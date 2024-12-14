@@ -1,21 +1,21 @@
 module Example where
 
 import Prelude
-import Beta.DOM.HTML as H
+import Yoga.React.DOM.HTML as H
 import Effect (Effect)
 import Effect.Class.Console (log)
-import Beta.DOM.Server (renderToStaticMarkup, renderToString)
-import Beta.DOM.HTML.Tfoot (tfoot)
+import Yoga.React.DOM.Server (renderToStaticMarkup, renderToString)
+import Yoga.React.DOM.HTML.Tfoot (tfoot)
 import React.Basic (JSX, fragment)
-import Beta.DOM.Internal (text, (++))
-import Beta.DOM.HTML.Blockquote (blockquote) as H
+import Yoga.React.DOM.Internal (text, (++))
+import Yoga.React.DOM.HTML.Blockquote (blockquote) as H
 import Node.FS.Aff (writeTextFile)
 import Effect.Aff (launchAff_)
 import Node.Encoding (Encoding(UTF8))
 import React.Basic.Hooks (Component, component, useState)
 import Data.Tuple.Nested ((/\))
 import React.Basic.Hooks as React
-import Beta.DOM.Client (createRoot, renderRoot)
+import Yoga.React.DOM.Client (createRoot, renderRoot)
 import Web.HTML (window)
 import Web.HTML.Window (document)
 import Web.HTML.HTMLDocument (toNonElementParentNode) as Window
@@ -25,9 +25,9 @@ import Data.Foldable (traverse_)
 import Web.HTML.HTMLElement (toElement) as HTMLElement
 import Web.HTML.HTMLDocument (toNonElementParentNode) as HTMLDocument
 import React.Basic.Events (handler_)
-import Beta.DOM.HTML.IFrame (iframeWithChildren) as H
-import Beta.DOM.HTML.Option (option) as H
-import Beta.DOM.HTML.Abbr (abbr) as H
+import Yoga.React.DOM.HTML.IFrame (iframeWithChildren) as H
+import Yoga.React.DOM.HTML.Option (option) as H
+import Yoga.React.DOM.HTML.Abbr (abbr) as H
 
 main :: Effect Unit
 main = do
