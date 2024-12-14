@@ -30,7 +30,7 @@ package:
   # Optional section for configuring the `spago publish` command.
   # If you intend to publish your package, this section becomes mandatory.
   publish:
-    version: 0.1.1
+    version: 1.0.0
     license: WTFPL
     location:
       githubOwner: rowtype-yoga
