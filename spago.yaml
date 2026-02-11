@@ -7,7 +7,7 @@ package:
     - nullable: ">=6.0.0 <7.0.0"
     - prelude: ">=6.0.1 <7.0.0"
     - react-basic: ">=17.0.0 <18.0.0"
-    - react-basic-hooks: ">=8.2.0 <9.0.0"
+    - react-basic-hooks: ">=8.2.0 <10.0.0"
     - record: ">=4.0.0 <5.0.0"
     - type-equality: ">=4.0.1 <5.0.0"
     - typelevel-prelude: ">=7.0.0 <8.0.0"
@@ -30,7 +30,7 @@ package:
   # Optional section for configuring the `spago publish` command.
   # If you intend to publish your package, this section becomes mandatory.
   publish:
-    version: 1.0.1
+    version: 1.0.2
     license: WTFPL
     location:
       githubOwner: rowtype-yoga
