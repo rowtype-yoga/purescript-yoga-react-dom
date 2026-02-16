@@ -31,3 +31,6 @@ onMouseOut = mkEffectFn1 <<< unsafeCoerce
 
 onMouseDown :: (MouseEvent -> Effect Unit) -> EventHandler
 onMouseDown = mkEffectFn1 <<< unsafeCoerce
+
+onMouseMove :: (MouseEvent -> Effect Unit) -> EventHandler
+onMouseMove = mkEffectFn1 <<< unsafeCoerce
