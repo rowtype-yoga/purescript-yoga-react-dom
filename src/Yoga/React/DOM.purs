@@ -1,12 +1,13 @@
 module Yoga.React.DOM
   ( module Yoga.React.DOM.HTML
   , module Yoga.React.DOM.Internal
+  , module Yoga.React.DOM.Attributes
   ) where
 
 import Yoga.React.DOM.Internal
 import Prelude hiding (div, map, sub)
 
-import Yoga.React.DOM.Attributes (BaseAttributes, BaseAttributesF, BaseAttributesR)
+import Yoga.React.DOM.Attributes (BaseAttributes, BaseAttributesF, BaseAttributesR, ReactRef, class IsReactRef, reactRef)
 import Yoga.React.DOM.Attributes.AutoCapitalize (AutoCapitalize)
 import Yoga.React.DOM.Attributes.InputMode (InputMode)
 import Yoga.React.DOM.Attributes.YesOrNo (YesOrNo)

@@ -7,11 +7,12 @@ import Yoga.React.DOM.Attributes.InputMode (InputMode)
 import Yoga.React.DOM.Attributes.YesOrNo (YesOrNo)
 import Yoga.React.DOM.Event (AnimationEvent, BaseEvent, ClipboardEvent, CompositionEvent, DragEvent, FocusEvent, InputEvent, MouseEvent, PointerEvent, ReactEventObject, TouchEvent, TransitionEvent, WheelEvent)
 import Data.Nullable (Nullable)
-import Effect.Uncurried (EffectFn1)
+import Effect (Effect)
+import Effect.Uncurried (EffectFn1, mkEffectFn1)
 import ForgetMeNot (Id)
 import React.Basic (Ref) as React
 import Type.Row (type (+))
-import Web.DOM.Internal.Types (Node)
+import Unsafe.Coerce (unsafeCoerce)
 import Yoga.React.DOM.Internal (CSS)
 import React.Basic.Events (EventHandler)
 
@@ -39,7 +40,7 @@ type ReactAttributesF :: forall k. (Type -> k) -> Row k -> Row k
 type ReactAttributesF f r =
   ( key :: f String
   , dangerouslySetInnerHTML :: f { __html :: String }
-  , ref :: f (React.Ref (Nullable Node))
+  , ref :: f ReactRef
   , suppressContentEditableWarning :: f Boolean
   , suppressHydrationWarning :: f Boolean
   , style :: f CSS
@@ -312,3 +313,17 @@ type ARIA_AttributesF f r =
   , "aria-valuetext" :: f String
   | r
   )
+
+foreign import data ReactRef :: Type
+
+class IsReactRef a where
+  reactRef :: a -> ReactRef
+
+instance IsReactRef (React.Ref a) where
+  reactRef = unsafeCoerce
+
+else instance IsReactRef (Nullable a -> Effect Unit) where
+  reactRef f = unsafeCoerce (mkEffectFn1 f)
+
+else instance IsReactRef (a -> Effect (Effect Unit)) where
+  reactRef f = unsafeCoerce (mkEffectFn1 f)

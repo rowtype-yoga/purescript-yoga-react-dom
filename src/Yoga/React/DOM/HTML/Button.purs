@@ -3,6 +3,7 @@ module Yoga.React.DOM.HTML.Button (button, button_) where
 import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes, BaseAttributesR)
+import Yoga.React.DOM.HTML.Form (FormAction)
 import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement, createBuiltinElement_)
 
 -- | The `<button>` tag in HTML, represents a clickable button.
@@ -44,4 +45,5 @@ type ButtonProps = BaseAttributesR
   , className :: String
   , disabled :: Boolean
   , form :: String
+  , formAction :: FormAction
   )

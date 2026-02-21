@@ -32,6 +32,7 @@ type InputAttributes = BaseAttributesR
   ( type :: String
   , name :: String
   , value :: String
+  , defaultValue :: String
   , placeholder :: String
   , disabled :: Boolean
   , autoFocus :: Boolean

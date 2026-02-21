@@ -12,9 +12,11 @@ import Yoga.React.DOM.HTML.Blockquote (blockquote) as H
 import Node.FS.Aff (writeTextFile)
 import Effect.Aff (launchAff_)
 import Node.Encoding (Encoding(UTF8))
-import React.Basic.Hooks (Component, component, useState)
+import React.Basic.Hooks (Component, component, useRef, useState)
 import Data.Tuple.Nested ((/\))
 import React.Basic.Hooks as React
+import Data.Nullable (Nullable, null)
+import Yoga.React.DOM.Attributes (reactRef)
 import Yoga.React.DOM.Client (createRoot, renderRoot)
 import Web.HTML (window)
 import Web.HTML.Window (document)
@@ -50,9 +52,12 @@ mkExample = do
 
 mkCounter = component "Counter" \_ -> React.do
   count /\ setCount <- useState 0
+  divRef <- useRef null
   pure $ fragment
     [ H.button { className: "bg-black px-4 py-2 rounded shadow font-bold text-white", onClick: handler_ $ setCount (_ + 1) } "Count up!"
-    , H.p {} ("You clicked me " ++ H.b {} (show count) ++ " times.")
+    , H.div { ref: reactRef divRef } [ H.p {} ("You clicked me " ++ H.b {} (show count) ++ " times.") ]
+    , H.div { ref: reactRef callbackRefExample } []
+    , H.div { ref: reactRef cleanupRefExample } []
     ]
 
 mainExample = H.main { className: "w-[80ch] max-w-[80ch] bg-white mx-auto shadow" }
@@ -129,7 +134,7 @@ tableExample = H.table { className: "table" }
 
 formExample :: JSX
 formExample = H.div { className: "myForm" }
-  [ H.form { action: "#" }
+  [ H.form { action: H.urlAction "#" }
       [ H.input { type: "text", placeholder: "Type something", className: "inputField" }
       , H.input { type: "submit", value: "Submit", className: "submitBtn" }
       ]
@@ -150,5 +155,11 @@ formExample = H.div { className: "myForm" }
   --      $ H.source { src: "path/to/audio.mp3", type: "audio/mpeg" }
 
   ]
+
+callbackRefExample :: Nullable Unit -> Effect Unit
+callbackRefExample _ = pure unit
+
+cleanupRefExample :: Unit -> Effect (Effect Unit)
+cleanupRefExample _ = pure (pure unit)
 
 x y = y.a + y.b + y.c
