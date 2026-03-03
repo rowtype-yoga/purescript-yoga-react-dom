@@ -35,7 +35,4 @@ package:
     location:
       githubOwner: rowtype-yoga
       githubRepo: purescript-yoga-react-dom
-workspace:
-  extraPackages: {}
-  packageSet:
-    registry: 51.2.0
+workspace: {}
