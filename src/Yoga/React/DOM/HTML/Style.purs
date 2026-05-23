@@ -1,9 +1,8 @@
 module Yoga.React.DOM.HTML.Style (style) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributesR)
-import Yoga.React.DOM.Internal (FFIComponent, FFIRawTextComponent, createBuiltinElement)
+import Yoga.React.DOM.Internal (FFIRawTextComponent, createBuiltinElement)
 
 -- | The `<style>` HTML element contains style information for a document, or part of a document.
 -- | The child must be a string

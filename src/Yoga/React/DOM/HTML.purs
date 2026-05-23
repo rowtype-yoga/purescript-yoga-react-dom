@@ -161,7 +161,6 @@ import Yoga.React.DOM.HTML.Map
 import Yoga.React.DOM.HTML.Mark
 import Yoga.React.DOM.HTML.Meta
 import Yoga.React.DOM.HTML.Meter
-import Yoga.React.DOM.HTML.Menu
 import Yoga.React.DOM.HTML.Nav
 import Yoga.React.DOM.HTML.NoScript
 import Yoga.React.DOM.HTML.Object

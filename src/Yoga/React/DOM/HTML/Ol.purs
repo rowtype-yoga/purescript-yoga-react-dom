@@ -1,8 +1,7 @@
 module Yoga.React.DOM.HTML.Ol (ol) where
 
-import Prelude
 
-import Yoga.React.DOM.Attributes (BaseAttributes, BaseAttributesR)
+import Yoga.React.DOM.Attributes (BaseAttributesR)
 import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)
 
 -- | The `<ol>` tag in HTML, represents an ordered list of items — typically rendered as a numbered list.

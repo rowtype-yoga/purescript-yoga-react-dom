@@ -1,6 +1,5 @@
 module Yoga.React.DOM.HTML.IFrame (iframe, iframeWithChildren) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributesR)
 import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement, createBuiltinElement_)

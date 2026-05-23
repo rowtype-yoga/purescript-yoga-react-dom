@@ -1,8 +1,7 @@
 module Yoga.React.DOM.HTML.Link (link) where
 
-import Prelude
 
-import Yoga.React.DOM.Attributes (BaseAttributes, BaseAttributesR)
+import Yoga.React.DOM.Attributes (BaseAttributesR)
 import Yoga.React.DOM.Internal (FFIComponent_, createBuiltinElement_)
 
 -- | The `<link>` tag in HTML, defines the relationship between the current document and an external resource.

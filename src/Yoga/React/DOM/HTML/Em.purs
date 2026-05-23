@@ -1,6 +1,5 @@
 module Yoga.React.DOM.HTML.Em (em) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
 import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)

@@ -1,6 +1,5 @@
 module Yoga.React.DOM.HTML.Base (base) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
 import Yoga.React.DOM.Internal (FFIComponent_, createBuiltinElement_)

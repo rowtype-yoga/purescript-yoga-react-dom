@@ -1,8 +1,7 @@
 module Yoga.React.DOM.HTML.Select (select) where
 
-import Prelude
 
-import Yoga.React.DOM.Attributes (BaseAttributes, BaseAttributesR)
+import Yoga.React.DOM.Attributes (BaseAttributesR)
 import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)
 import React.Basic.Events (EventHandler)
 

@@ -1,10 +1,9 @@
 module Yoga.React.DOM.Handler where
 
 import Prelude
-import Effect.Uncurried (EffectFn1, mkEffectFn1)
+import Effect.Uncurried (mkEffectFn1)
 import Effect (Effect)
 import Yoga.React.DOM.Event (FocusEvent, MouseEvent)
-import Yoga.React.DOM.Attributes (ReactEventHandler(ReactEventHandler))
 import React.Basic.Events (EventHandler)
 import Unsafe.Coerce (unsafeCoerce)
 

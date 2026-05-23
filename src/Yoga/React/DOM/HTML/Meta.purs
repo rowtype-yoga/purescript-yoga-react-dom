@@ -1,8 +1,7 @@
 module Yoga.React.DOM.HTML.Meta (meta) where
 
-import Prelude
 
-import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement_)
+import Yoga.React.DOM.Internal (FFIComponent_, createBuiltinElement_)
 
 type MetaAttributes =
   ( charSet :: String

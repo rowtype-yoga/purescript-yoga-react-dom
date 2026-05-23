@@ -1,6 +1,5 @@
 module Yoga.React.DOM.HTML.Div (div, div_) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
 import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement, createBuiltinElement_)

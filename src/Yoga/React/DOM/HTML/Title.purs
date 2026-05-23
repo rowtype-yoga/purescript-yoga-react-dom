@@ -1,9 +1,7 @@
 module Yoga.React.DOM.HTML.Title (title) where
 
-import Prelude
 
-import Yoga.React.DOM.Attributes (BaseAttributes)
-import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement)
+import Yoga.React.DOM.Internal (createBuiltinElement)
 import React.Basic (JSX)
 
 -- | The `<title>` tag in HTML, it defines the title of the HTML document, which is shown in a browser's title bar or a page's tab.

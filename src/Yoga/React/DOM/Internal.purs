@@ -3,13 +3,10 @@ module Yoga.React.DOM.Internal where
 import Prelude
 
 import Data.Function.Uncurried (Fn2, Fn3, runFn2, runFn3)
-import Data.Symbol (class IsSymbol)
 import Prim.Boolean (False, True)
-import Prim.Row (class Cons, class Lacks, class Nub, class Union)
-import Prim.Row as Row
+import Prim.Row (class Cons, class Union)
 import Prim.RowList (class RowToList, RowList)
 import Prim.Symbol as Symbol
-import Prim.TypeError (class Fail, class Warn, Text)
 import React.Basic (JSX, ReactComponent)
 import React.Basic.Hooks (ReactChildren)
 import Type.Equality (class TypeEquals)

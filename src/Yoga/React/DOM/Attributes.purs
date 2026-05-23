@@ -5,7 +5,7 @@ import Prelude
 import Yoga.React.DOM.Attributes.AutoCapitalize (AutoCapitalize)
 import Yoga.React.DOM.Attributes.InputMode (InputMode)
 import Yoga.React.DOM.Attributes.YesOrNo (YesOrNo)
-import Yoga.React.DOM.Event (AnimationEvent, BaseEvent, ClipboardEvent, CompositionEvent, DragEvent, FocusEvent, InputEvent, MouseEvent, PointerEvent, ReactEventObject, TouchEvent, TransitionEvent, WheelEvent)
+import Yoga.React.DOM.Event (TouchEvent)
 import Data.Nullable (Nullable)
 import Effect (Effect)
 import Effect.Uncurried (EffectFn1, mkEffectFn1)

@@ -1,6 +1,5 @@
 module Yoga.React.DOM.HTML.Sup (sup) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
 import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)

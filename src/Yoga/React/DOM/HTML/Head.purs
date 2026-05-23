@@ -1,9 +1,8 @@
 module Yoga.React.DOM.HTML.Head (head) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
-import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement, createBuiltinElement_)
+import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)
 
 -- | The `<head>` tag in HTML, typically includes meta-information about the document such as its title, linked stylesheets and scripts.
 -- |

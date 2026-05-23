@@ -1,6 +1,5 @@
 module Yoga.React.DOM.HTML.H (h1, h2, h3, h4, h5, h6) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
 import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)

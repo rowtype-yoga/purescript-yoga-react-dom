@@ -1,6 +1,5 @@
 module Yoga.React.DOM.HTML.Optgroup (optgroup) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributesR)
 import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)

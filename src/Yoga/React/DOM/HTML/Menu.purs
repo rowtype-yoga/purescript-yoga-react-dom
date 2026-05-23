@@ -1,10 +1,8 @@
 module Yoga.React.DOM.HTML.Menu (menu) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributesR)
 import Yoga.React.DOM.Internal (FFIComponent_, createBuiltinElement_)
-import React.Basic.Events (EventHandler)
 
 -- | The `<menu>` tag in HTML, represents a group of commands that a user can perform or activate.
 -- | #### Example:

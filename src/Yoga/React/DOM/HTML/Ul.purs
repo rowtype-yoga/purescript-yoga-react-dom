@@ -1,9 +1,8 @@
 module Yoga.React.DOM.HTML.Ul (ul) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
-import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement, createBuiltinElement_)
+import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)
 
 -- | The `<ul>` tag in HTML, represents an unordered list of items, typically rendered as a bulleted list.
 -- |

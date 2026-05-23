@@ -1,9 +1,8 @@
 module Yoga.React.DOM.HTML.HTML (html) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
-import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement, createBuiltinElement_)
+import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)
 
 -- | The `<html>` tag in HTML, which is the root of an HTML document.
 -- |

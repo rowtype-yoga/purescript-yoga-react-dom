@@ -1,11 +1,8 @@
 module Yoga.React.DOM.HTML.Label (label) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributesR)
 import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)
-import Unsafe.Coerce (unsafeCoerce)
-import Prim.Row (class Union)
 
 -- | The `<label>` HTML element represents a caption for an item in a user interface.
 -- | It can be associated with a control either by placing the control element inside the `<label>` element,

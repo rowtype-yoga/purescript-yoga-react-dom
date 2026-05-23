@@ -1,9 +1,8 @@
 module Yoga.React.DOM.HTML.Span (span) where
 
-import Prelude
 
 import Yoga.React.DOM.Attributes (BaseAttributes)
-import Yoga.React.DOM.Internal (FFIComponent, FFIComponent_, createBuiltinElement, createBuiltinElement_)
+import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)
 
 -- | The `<span>` tag in HTML is a generic inline container for phrasing content, which does
 -- | not inherently represent anything. It can be used to group elements for styling purposes

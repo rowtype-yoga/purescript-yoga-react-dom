@@ -1,8 +1,7 @@
 module Yoga.React.DOM.HTML.Bdo (bdo) where
 
-import Prelude
 
-import Yoga.React.DOM.Attributes (BaseAttributes, BaseAttributesR)
+import Yoga.React.DOM.Attributes (BaseAttributesR)
 import Yoga.React.DOM.Internal (FFIComponent, createBuiltinElement)
 import Yoga.React.DOM.Attributes.Dir (Dir)
 
