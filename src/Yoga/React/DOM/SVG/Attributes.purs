@@ -173,6 +173,28 @@ type SVGAttributesR =
   , targetY :: String
   , kernelMatrix :: String
   , kernelUnitLength :: String
+  , order :: String
+  , preserveAlpha :: String
+  -- Lighting filter primitives
+  , surfaceScale :: String
+  , diffuseConstant :: String
+  , specularConstant :: String
+  , specularExponent :: String
+  , lightingColor :: String
+  , azimuth :: String
+  , elevation :: String
+  , z :: String
+  , pointsAtX :: String
+  , pointsAtY :: String
+  , pointsAtZ :: String
+  , limitingConeAngle :: String
+  -- feComponentTransfer / feFunc*
+  , tableValues :: String
+  -- View / metadata
+  , zoomAndPan :: String
+  , content :: String
+  -- mpath / use external refs (in addition to href/xlinkHref above)
+  , externalResourcesRequired :: String
   -- SVG root only
   , xmlns :: String
   , xmlnsXlink :: String

@@ -10,6 +10,11 @@ module Yoga.React.DOM.SVG
   , module Yoga.React.DOM.SVG.ForeignObject
   , module Yoga.React.DOM.SVG.Title
   , module Yoga.React.DOM.SVG.Desc
+  , module Yoga.React.DOM.SVG.Metadata
+  , module Yoga.React.DOM.SVG.View
+  , module Yoga.React.DOM.SVG.Script
+  , module Yoga.React.DOM.SVG.Style
+  , module Yoga.React.DOM.SVG.A
   -- Shapes
   , module Yoga.React.DOM.SVG.Path
   , module Yoga.React.DOM.SVG.Circle
@@ -36,20 +41,36 @@ module Yoga.React.DOM.SVG
   , module Yoga.React.DOM.SVG.AnimateTransform
   , module Yoga.React.DOM.SVG.AnimateMotion
   , module Yoga.React.DOM.SVG.Set
-  -- Filters
+  , module Yoga.React.DOM.SVG.Mpath
+  -- Filter container
   , module Yoga.React.DOM.SVG.Filter
-  , module Yoga.React.DOM.SVG.FeGaussianBlur
-  , module Yoga.React.DOM.SVG.FeOffset
+  -- Filter primitives
   , module Yoga.React.DOM.SVG.FeBlend
   , module Yoga.React.DOM.SVG.FeColorMatrix
+  , module Yoga.React.DOM.SVG.FeComponentTransfer
+  , module Yoga.React.DOM.SVG.FeComposite
+  , module Yoga.React.DOM.SVG.FeConvolveMatrix
+  , module Yoga.React.DOM.SVG.FeDiffuseLighting
+  , module Yoga.React.DOM.SVG.FeDisplacementMap
+  , module Yoga.React.DOM.SVG.FeDropShadow
+  , module Yoga.React.DOM.SVG.FeFlood
+  , module Yoga.React.DOM.SVG.FeFuncA
+  , module Yoga.React.DOM.SVG.FeFuncB
+  , module Yoga.React.DOM.SVG.FeFuncG
+  , module Yoga.React.DOM.SVG.FeFuncR
+  , module Yoga.React.DOM.SVG.FeGaussianBlur
+  , module Yoga.React.DOM.SVG.FeImage
   , module Yoga.React.DOM.SVG.FeMerge
   , module Yoga.React.DOM.SVG.FeMergeNode
-  , module Yoga.React.DOM.SVG.FeFlood
-  , module Yoga.React.DOM.SVG.FeComposite
-  , module Yoga.React.DOM.SVG.FeDropShadow
   , module Yoga.React.DOM.SVG.FeMorphology
+  , module Yoga.React.DOM.SVG.FeOffset
+  , module Yoga.React.DOM.SVG.FeSpecularLighting
+  , module Yoga.React.DOM.SVG.FeTile
   , module Yoga.React.DOM.SVG.FeTurbulence
-  , module Yoga.React.DOM.SVG.FeDisplacementMap
+  -- Light source children
+  , module Yoga.React.DOM.SVG.FeDistantLight
+  , module Yoga.React.DOM.SVG.FePointLight
+  , module Yoga.React.DOM.SVG.FeSpotLight
   ) where
 
 import Yoga.React.DOM.SVG.Attributes (SVGAttributes, SVGAttributesR)
@@ -62,6 +83,11 @@ import Yoga.React.DOM.SVG.Switch (switch, switch_)
 import Yoga.React.DOM.SVG.ForeignObject (foreignObject, foreignObject_)
 import Yoga.React.DOM.SVG.Title (title, title_)
 import Yoga.React.DOM.SVG.Desc (desc, desc_)
+import Yoga.React.DOM.SVG.Metadata (metadata, metadata_)
+import Yoga.React.DOM.SVG.View (view, view_)
+import Yoga.React.DOM.SVG.Script (script, script_)
+import Yoga.React.DOM.SVG.Style (style, style_)
+import Yoga.React.DOM.SVG.A (a, a_)
 import Yoga.React.DOM.SVG.Path (path, path_)
 import Yoga.React.DOM.SVG.Circle (circle, circle_)
 import Yoga.React.DOM.SVG.Ellipse (ellipse, ellipse_)
@@ -84,16 +110,30 @@ import Yoga.React.DOM.SVG.Animate (animate, animate_)
 import Yoga.React.DOM.SVG.AnimateTransform (animateTransform, animateTransform_)
 import Yoga.React.DOM.SVG.AnimateMotion (animateMotion, animateMotion_)
 import Yoga.React.DOM.SVG.Set (set, set_)
+import Yoga.React.DOM.SVG.Mpath (mpath, mpath_)
 import Yoga.React.DOM.SVG.Filter (filter, filter_)
-import Yoga.React.DOM.SVG.FeGaussianBlur (feGaussianBlur, feGaussianBlur_)
-import Yoga.React.DOM.SVG.FeOffset (feOffset, feOffset_)
 import Yoga.React.DOM.SVG.FeBlend (feBlend, feBlend_)
 import Yoga.React.DOM.SVG.FeColorMatrix (feColorMatrix, feColorMatrix_)
+import Yoga.React.DOM.SVG.FeComponentTransfer (feComponentTransfer, feComponentTransfer_)
+import Yoga.React.DOM.SVG.FeComposite (feComposite, feComposite_)
+import Yoga.React.DOM.SVG.FeConvolveMatrix (feConvolveMatrix, feConvolveMatrix_)
+import Yoga.React.DOM.SVG.FeDiffuseLighting (feDiffuseLighting, feDiffuseLighting_)
+import Yoga.React.DOM.SVG.FeDisplacementMap (feDisplacementMap, feDisplacementMap_)
+import Yoga.React.DOM.SVG.FeDropShadow (feDropShadow, feDropShadow_)
+import Yoga.React.DOM.SVG.FeFlood (feFlood, feFlood_)
+import Yoga.React.DOM.SVG.FeFuncA (feFuncA, feFuncA_)
+import Yoga.React.DOM.SVG.FeFuncB (feFuncB, feFuncB_)
+import Yoga.React.DOM.SVG.FeFuncG (feFuncG, feFuncG_)
+import Yoga.React.DOM.SVG.FeFuncR (feFuncR, feFuncR_)
+import Yoga.React.DOM.SVG.FeGaussianBlur (feGaussianBlur, feGaussianBlur_)
+import Yoga.React.DOM.SVG.FeImage (feImage, feImage_)
 import Yoga.React.DOM.SVG.FeMerge (feMerge, feMerge_)
 import Yoga.React.DOM.SVG.FeMergeNode (feMergeNode, feMergeNode_)
-import Yoga.React.DOM.SVG.FeFlood (feFlood, feFlood_)
-import Yoga.React.DOM.SVG.FeComposite (feComposite, feComposite_)
-import Yoga.React.DOM.SVG.FeDropShadow (feDropShadow, feDropShadow_)
 import Yoga.React.DOM.SVG.FeMorphology (feMorphology, feMorphology_)
+import Yoga.React.DOM.SVG.FeOffset (feOffset, feOffset_)
+import Yoga.React.DOM.SVG.FeSpecularLighting (feSpecularLighting, feSpecularLighting_)
+import Yoga.React.DOM.SVG.FeTile (feTile, feTile_)
 import Yoga.React.DOM.SVG.FeTurbulence (feTurbulence, feTurbulence_)
-import Yoga.React.DOM.SVG.FeDisplacementMap (feDisplacementMap, feDisplacementMap_)
+import Yoga.React.DOM.SVG.FeDistantLight (feDistantLight, feDistantLight_)
+import Yoga.React.DOM.SVG.FePointLight (fePointLight, fePointLight_)
+import Yoga.React.DOM.SVG.FeSpotLight (feSpotLight, feSpotLight_)
