@@ -1,4 +1,7 @@
-module Yoga.React.DOM.Event where
+module Yoga.React.DOM.Event
+  ( module Yoga.React.DOM.Event
+  , readInnerHTML
+  ) where
 
 import Prelude
 
@@ -10,6 +13,8 @@ import Data.Time.Duration (Seconds)
 import Web.HTML.Event.DataTransfer (DataTransfer)
 import Web.TouchEvent.TouchList (TouchList)
 import Web.TouchEvent.Touch (Touch)
+
+foreign import readInnerHTML :: EventTarget -> String
 
 type ReactEventObject more =
   ( bubbles :: Boolean
