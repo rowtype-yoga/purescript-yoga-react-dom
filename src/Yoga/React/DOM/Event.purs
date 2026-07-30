@@ -6,7 +6,6 @@ import Prelude
 
 import Data.DateTime.Instant (Instant)
 import Effect (Effect)
-import React.Basic.Events (SyntheticEvent)
 import Web.Event.Event (EventType)
 import Web.Event.Internal.Types (Event, EventTarget)
 import Data.Time.Duration (Seconds)
@@ -14,7 +13,7 @@ import Web.HTML.Event.DataTransfer (DataTransfer)
 import Web.TouchEvent.TouchList (TouchList)
 import Web.TouchEvent.Touch (Touch)
 
-foreign import currentTargetInnerHTML :: SyntheticEvent -> String
+foreign import innerHTML :: EventTarget -> String
 
 type ReactEventObject more =
   ( bubbles :: Boolean
